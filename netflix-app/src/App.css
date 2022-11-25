@@ -39,7 +39,31 @@
   }
 }
 .cover-size {
-  height: 260px;
+  /* height: 300px; */
+  object-fit: cover;
+}
+.Image-movie {
+  position: relative;
+}
+.Image-movie-darken {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.Image-movie-darken:hover {
+  background-color: rgb(6, 6, 6);
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.Image-movie:hover {
+  height: 340px;
   object-fit: cover;
 }
 .img-size {

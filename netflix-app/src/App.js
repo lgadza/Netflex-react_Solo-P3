@@ -6,18 +6,18 @@ import LordOfTheRings from "./components/LordOfTheRings";
 import HerryPorter from "./components/HerryPorter";
 import WhiteHouseDown from "./components/WhiteHouseDown";
 import ProfilPage from "./components/ProfilePage";
+import { propTypes } from "react-bootstrap/esm/Image";
 // import logo from "..//assets/netflix_logo.png";
 
-function App() {
+function App(props) {
   return (
     <div className="App ">
       <MyNavbar />
-      {/* <MovieList /> */}
       <LordOfTheRings />
       <HerryPorter />
       <WhiteHouseDown />
       <MyFooter />
-      <ProfilPage />
+      {/* <ProfilPage /> */}
     </div>
   );
 }

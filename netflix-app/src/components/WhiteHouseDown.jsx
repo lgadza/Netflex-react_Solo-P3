@@ -2,6 +2,8 @@
 import { Component } from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
+import SingleMovie from "./SingleMovie";
+
 class WhiteHouseDown extends Component {
   state = {
     movies: [],
@@ -52,11 +54,7 @@ class WhiteHouseDown extends Component {
             <Row>
               {this.state.movies.slice(0, 4).map((m) => (
                 <Col className="cover-size" md={3} key={m.imdbID}>
-                  <img
-                    className="d-block img-size w-100"
-                    src={m.Poster}
-                    alt={m.Title}
-                  />
+                  <SingleMovie movie={m} />
                 </Col>
               ))}
             </Row>
@@ -65,7 +63,7 @@ class WhiteHouseDown extends Component {
             <Row>
               {this.state.movies.slice(4, 8).map((m) => (
                 <Col className="cover-size" md={3} key={m.imdbID}>
-                  <img className="d-block w-100" src={m.Poster} alt={m.Title} />
+                  <SingleMovie movie={m} />
                 </Col>
               ))}
             </Row>
@@ -74,7 +72,7 @@ class WhiteHouseDown extends Component {
             <Row>
               {this.state.movies.slice(8).map((m) => (
                 <Col className="cover-size" md={3} key={m.imdbID}>
-                  <img className="d-block w-100" src={m.Poster} alt={m.Title} />
+                  <SingleMovie movie={m} />
                 </Col>
               ))}
             </Row>

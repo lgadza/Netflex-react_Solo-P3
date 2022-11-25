@@ -30,11 +30,22 @@ svg {
 }
 .dropdown-menu-dark {
   background-color: black !important;
+  transform: translateX(-50%);
 }
 .pushme-right {
-  margin-left: 25%;
+  margin-left: 45%;
 }
 .dropdown-item {
   background-color: none;
   color: white;
+}
+.card-body {
+  color: black;
+  color: white;
+  font-size: 1em;
+  transform: translateY(-300px);
+  height: 0px;
+}
+.card {
+  height: 305px;
 }
