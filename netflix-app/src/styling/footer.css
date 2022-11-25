@@ -1,8 +1,13 @@
 svg {
   margin: 0 10px;
 }
-/* .background,
-.navbar-nav,
-.col-md-3 {
-  background-color: #282c34 !important;
-} */
+
+.profile-pic {
+  height: 30px;
+  border-radius: 50%;
+  width: 30px;
+  object-fit: cover;
+}
+.background {
+  background-color: white;
+}
