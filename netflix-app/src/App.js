@@ -7,18 +7,30 @@ import HerryPorter from "./components/HerryPorter";
 import WhiteHouseDown from "./components/WhiteHouseDown";
 import ProfilPage from "./components/ProfilePage";
 import { propTypes } from "react-bootstrap/esm/Image";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TvShows from "./components/TvShows";
+import Home from "./components/Home";
+import NotFound from "./components/NotFound";
+import MovieDatails from "./components/MovieDetails";
 // import logo from "..//assets/netflix_logo.png";
 
 function App(props) {
   return (
-    <div className="App ">
-      <MyNavbar />
-      <LordOfTheRings />
-      <HerryPorter />
-      <WhiteHouseDown />
-      <MyFooter />
-      {/* <ProfilPage /> */}
-    </div>
+    <BrowserRouter>
+      <div className="App ">
+        <MyNavbar />
+        <Routes>
+          <Route element={<Home />} path="/" />
+          <Route element={<TvShows />} path="/tv-shows" />
+          <Route element={<MovieDatails />} path="/details/:movieId" />
+          <Route element={<NotFound />} path="*" />
+          {/* <MovieDatails /> */}
+        </Routes>
+        <MyFooter />
+
+        {/* <ProfilPage /> */}
+      </div>
+    </BrowserRouter>
   );
 }
 
