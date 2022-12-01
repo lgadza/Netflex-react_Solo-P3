@@ -3,6 +3,7 @@ import Card from "react-bootstrap/Card";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ListGroup, Alert, Spinner } from "react-bootstrap/";
+import { Link } from "react-router-dom";
 
 const SingleMovie = (props) => {
   // state = {
@@ -29,30 +30,22 @@ const SingleMovie = (props) => {
   //   }
 
   return (
-    <Card
-      // onMouseEnter={this.seeDetails}
-      // onMouseLeave={this.hideDetails}
-      onClick={handleClick}
-      style={{ border: selected ? "3px solid red" : "none" }}
-      key={props.movie.imdbID}
-      // onClick={() => this.setState({ selected: true })}
-      // style={{ border: this.state.selected ? "3px solid red" : "none" }}
-    >
-      <Card.Img
-        className="Image-movie"
-        variant="top"
-        src={props.movie.Poster}
-      />
-      <div className="Image-movie-darken"></div>
-      {selected && (
-        <Card.Body>
-          <h4>Movie Details</h4>
-
-          <Card.Title>{props.movie.Title}</Card.Title>
-          <Card.Text>{props.movie.Year}</Card.Text>
-        </Card.Body>
-      )}
-    </Card>
+    <Link to={`/details/${props.movie.imdbID}`}>
+      <Card
+        // onMouseEnter={this.seeDetails}
+        // onMouseLeave={this.hideDetails}
+        onClick={handleClick}
+        style={{ border: selected ? "3px solid red" : "none" }}
+        key={props.movie.imdbID}
+      >
+        <Card.Img
+          className="Image-movie"
+          variant="top"
+          src={props.movie.Poster}
+        />
+        <div className="Image-movie-darken"></div>
+      </Card>
+    </Link>
   );
 };
 

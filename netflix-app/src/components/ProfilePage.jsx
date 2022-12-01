@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Button, Navbar, Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import avatar from "..//assets/avatar.png";
 import netflix_logo from "..//assets/netflix_logo.png";
 

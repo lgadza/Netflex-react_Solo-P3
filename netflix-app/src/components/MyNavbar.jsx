@@ -119,17 +119,27 @@ const MyNavbar = () => {
                   </div>
                 </Nav.Link>
                 <Dropdown.Item
-                  onClick={(e) => {
-                    e.preventDefault();
-                    this.setState = {
-                      isManageProfilesSelected: true,
-                    };
-                    console.log("clicked");
-                  }}
-                  class="dropdown-item"
-                  href="#"
+                // onClick={(e) => {
+                //   e.preventDefault();
+                //   this.setState = {
+                //     isManageProfilesSelected: true,
+                //   };
+                //   console.log("clicked");
+                // }}
+                // className="dropdown-item"
+                // href="#"
                 >
-                  Manage Profiles
+                  <Link to="/profile" className="navbar-links dropdown-item">
+                    <div
+                      className={
+                        location.pathname === "/profile"
+                          ? "nav-link active"
+                          : "nav-link"
+                      }
+                    >
+                      Manage Profiles
+                    </div>
+                  </Link>
                 </Dropdown.Item>
 
                 <Dropdown.Item class="dropdown-item" href="#">

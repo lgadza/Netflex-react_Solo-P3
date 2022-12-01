@@ -22,13 +22,12 @@ function App(props) {
         <Routes>
           <Route element={<Home />} path="/" />
           <Route element={<TvShows />} path="/tv-shows" />
+          <Route element={<ProfilPage />} path="/profile" />
           <Route element={<MovieDatails />} path="/details/:movieId" />
           <Route element={<NotFound />} path="*" />
-          {/* <MovieDatails /> */}
         </Routes>
+        {/* <MovieDatails path="/details/:movieId" /> */}
         <MyFooter />
-
-        {/* <ProfilPage /> */}
       </div>
     </BrowserRouter>
   );
