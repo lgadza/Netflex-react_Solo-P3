@@ -9,7 +9,8 @@ const TvShows = () => {
   const fetchAction = async () => {
     try {
       const response = await fetch(
-        "http://www.omdbapi.com/?apikey=6adf6eb5&s=the%20crown"
+        "https://netflix-backend.cyclic.app/medias/"
+        // "http://www.omdbapi.com/?apikey=6adf6eb5&s=the%20crown"
       );
       if (response.ok) {
         let movie = await response.json();
